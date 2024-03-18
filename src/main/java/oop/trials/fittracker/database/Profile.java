@@ -47,7 +47,8 @@ public class Profile extends SqlModel{
                         rs.getString(5) + ":" +
                         rs.getFloat(6) + ":" +
                         rs.getFloat (7) + ":" +
-                        rs.getString(8));
+                        rs.getString(8) + ":" +
+                        rs.getInt(9));
             }
 
         } catch (SQLException e) {

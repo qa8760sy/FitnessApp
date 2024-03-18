@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63bcc30b-ee53-42c0-a511-9994057c3825" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/oop/trials/fittracker/database/Profile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/oop/trials/fittracker/database/Simple_nutrition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/oop/trials/fittracker/database/Simple_workout.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/oop/trials/fittracker/database/SqlModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="63bcc30b-ee53-42c0-a511-9994057c3825" name="Changes" comment="changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oop/trials/fittracker/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oop/trials/fittracker/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oop/trials/fittracker/workout/Workout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oop/trials/fittracker/workout/Workout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oop/trials/fittracker/database/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oop/trials/fittracker/database/Profile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +97,28 @@
       <option name="presentableId" value="Default" />
       <updated>1708393300789</updated>
     </task>
+    <task id="LOCAL-00001" summary="I hope this works">
+      <option name="closed" value="true" />
+      <created>1710790694374</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710790694374</updated>
+    </task>
+    <task id="LOCAL-00002" summary="changes">
+      <option name="closed" value="true" />
+      <created>1710795543176</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710795543176</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="I hope this works" />
+    <MESSAGE value="changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes" />
   </component>
 </project>
