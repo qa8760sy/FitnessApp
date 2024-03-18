@@ -6,23 +6,43 @@ public class Tracker {
     private Workout workout;
     private Graph graph;
 
-    public void setUserAccount(UserAccount userAccount) {this.userAccount = userAccount;}
+    public void setUserAccount(UserAccount userAccount) {
+        this.userAccount = userAccount;
+    }
 
-    public void setUserProfile(UserProfile userProfile) {this.userProfile = userProfile;}
+    public void setUserProfile(UserProfile userProfile) {
+        this.userProfile = userProfile;
+    }
 
-    public void setUserGoal(Goal userGoal) {this.userGoal = userGoal;}
+    public void setUserGoal(Goal userGoal) {
+        this.userGoal = userGoal;
+    }
 
-    public void setWorkout(Workout workout) {this.workout = workout;}
+    public void setWorkout(Workout workout) {
+        this.workout = workout;
+    }
 
-    public void setGraph(Graph graph) {this.graph = graph;}
+    public void setGraph(Graph graph) {
+        this.graph = graph;
+    }
 
-    public UserAccount getUserAccount() {return userAccount;}
+    public UserAccount getUserAccount() {
+        return userAccount;
+    }
 
-    public UserProfile getUserProfile() {return userProfile;}
+    public UserProfile getUserProfile() {
+        return userProfile;
+    }
 
-    public Goal getUserGoal() {return userGoal;}
+    public Goal getUserGoal() {
+        return userGoal;
+    }
 
-    public Workout getWorkout() {return workout;}
+    public Workout getWorkout() {
+        return workout;
+    }
 
-    public Graph getGraph() {return graph;}
+    public Graph getGraph() {
+        return graph;
+    }
 }
