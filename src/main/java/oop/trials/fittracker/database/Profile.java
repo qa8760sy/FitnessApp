@@ -1,8 +1,8 @@
 package oop.trials.fittracker.database;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Profile extends SqlModel{
 
@@ -30,5 +30,31 @@ public class Profile extends SqlModel{
         }
     }
 
+    public ArrayList<String> getAll(){
+        ArrayList<String> rowList = new ArrayList<>();
+        String sql = "Select * from profile";
+
+        try (Connection conn = this.connect();
+             Statement stmt  = conn.createStatement();
+             ResultSet rs   = stmt.executeQuery(sql)){
+
+
+            while (rs.next()) {
+                rowList.add(rs.getInt(1) +  ":" +
+                        rs.getString(2) + ":" +
+                        rs.getString(3) + ":" +
+                        rs.getString(4) + ":" +
+                        rs.getString(5) + ":" +
+                        rs.getFloat(6) + ":" +
+                        rs.getFloat (7) + ":" +
+                        rs.getString(8));
+            }
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return rowList;
+
+    }
 
 }

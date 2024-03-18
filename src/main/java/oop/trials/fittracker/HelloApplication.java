@@ -6,9 +6,13 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import oop.trials.fittracker.database.*;
+
+import javax.sql.RowSet;
 
 public class HelloApplication extends Application {
     @Override
@@ -23,13 +27,20 @@ public class HelloApplication extends Application {
     public static void main(String[] args) {
         ArrayList<String> rowList = new ArrayList<>();
         Profile profile = new Profile();
-        Simple_workout wout = new Simple_workout();
+        //Simple_workout wout = new Simple_workout();
+        Profile wout = new Profile();
+       // ResultSet setofrow = wout.stringQuery("Select * from profile");
 
-        System.out.println("ahhhhhhhhhhhhhhh");
-        rowList = wout.getLast30();
+       /* try {
+            System.out.println(setofrow.getString("first_name") + setofrow.getNString("last_name") + setofrow.getNString("email"));
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }*/
+
+        rowList = wout.getAll();
+        // rowList = wout.getLast30();
         for (int i = 0; i < rowList.size(); i++) {
             System.out.println(rowList.get(i));
-            System.out.println("ahhhhhhhhhhhhhhh");
         }
         launch();
     }

@@ -29,33 +29,58 @@ public abstract class SqlModel {
     }
 
 
-    public ArrayList<String> stringQuery (String sql){
+    public ResultSet stringQuery(String sql){
+
+
+        try (Connection conn = this.connect();
+             Statement stmt  = conn.createStatement();
+             ResultSet rs   = stmt.executeQuery(sql)){
+            return rs;
+
+
+
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return null;
+
+    }
+
+
+   /* public ArrayList<String> stringQuery(String sql){
 
         ArrayList<String> rowList = new ArrayList<>();
+
 
         try (Connection conn = this.connect();
              Statement stmt  = conn.createStatement();
              ResultSet rs   = stmt.executeQuery(sql)){
 
-
             ResultSetMetaData rsmd = rs.getMetaData();
             int numCol = rsmd.getColumnCount();
             int counter = 0;
 
-            while(rs.next()){
-                StringBuilder builder = new StringBuilder();
 
+            do {
+                StringBuilder builder = new StringBuilder();
+                System.out.println(numCol);
                 for(int i = 1; i <= numCol; i++) {
                     builder.append(rs.getNString(i) + ":");
+                    System.out.println("yeet");
                 }
-                rowList.add(builder.toString());
 
-            }
+
+
+                rowList.add(builder.toString());
+                System.out.println(builder.toString());
+
+            } while(rs.next());
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
         return rowList;
-    }
+    }*/
 
 
 

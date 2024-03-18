@@ -29,7 +29,36 @@ public class Simple_workout extends SqlModel {
 
     public ArrayList<String> getLast30(){
         ArrayList<String> rowList = new ArrayList<>();
-        String sql = "Select * from simple_workout  WHERE date_of > DATETIME('now', '-30 year')";
+        String sql = "Select * from simple_workout  WHERE date_of > DATETIME('now', '-30 days')";
+
+        try (Connection conn = this.connect();
+             Statement stmt  = conn.createStatement();
+             ResultSet rs   = stmt.executeQuery(sql)){
+
+
+            //ResultSetMetaData rsmd = rs.getMetaData();
+            //int numCol = rsmd.getColumnCount();
+            //int counter = 0;
+
+
+
+            while (rs.next()) {
+                rowList.add(rs.getDate("date_of") +  ":" +
+                        rs.getString("workout_name") + ":" +
+                        rs.getInt("length_min") + ":" +
+                        rs.getInt("calories_burnt"));
+            }
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return rowList;
+
+    }
+
+    public ArrayList<String> getLastyear(){
+        ArrayList<String> rowList = new ArrayList<>();
+        String sql = "Select * from simple_workout  WHERE date_of > DATETIME('now', '-1 year')";
 
         try (Connection conn = this.connect();
              Statement stmt  = conn.createStatement();
@@ -43,24 +72,12 @@ public class Simple_workout extends SqlModel {
 
 
             while (rs.next()) {
-                System.out.println(rs.getDate("date_of") +  "\t" +
-                        rs.getString("workout_name") + "\t" +
-                        rs.getInt("length_min") + "\t" +
+                rowList.add(rs.getDate("date_of") +  ":" +
+                        rs.getString("workout_name") + ":" +
+                        rs.getInt("length_min") + ":" +
                         rs.getInt("calories_burnt"));
             }
 
-            /*while(rs.next()){
-                StringBuilder builder = new StringBuilder();
-
-                System.out.println(rs.next());
-
-                for(int i = 1; i <= numCol; i++) {
-                    builder.append(rs.getNString(i) + ":");
-                    System.out.println(rs.getNString(i) + ":");
-                }
-                rowList.add(builder.toString());
-
-            }*/
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
