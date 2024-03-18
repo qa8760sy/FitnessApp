@@ -1,2 +1,2 @@
-package oop.trials.fittracker.workout;public class WOrkout {
+package oop.trials.fittracker.workout;public class Workout {
 }
