@@ -1,5 +1,6 @@
 package oop.trials.fittracker.goal;
 import java.time.LocalDate;
+import oop.trials.fittracker.record.Record;
 public class Goal implements Record{
     private String goalType;
     private double goalValue;
